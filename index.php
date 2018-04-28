@@ -1,3 +1,3 @@
 <?php
 
-echo "Hello World, <strong>Um nice dia</strong>";
+echo "Ola mundo";
