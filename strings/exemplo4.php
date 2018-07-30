@@ -11,6 +11,7 @@ $q = strpos($frase, $palavra);
 var_dump($q);
 echo "<br>";
 
+// Mesma coisa da próxima função porém está irá começar da string de valor 0 e irá até o começo da palavra mae, que possui o valor de string int(19).
 //$texto = substr($frase, 0, $q);
 //echo $texto;
 //echo "<br>";
