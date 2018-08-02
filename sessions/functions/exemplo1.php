@@ -10,7 +10,7 @@
     // Função usada para verificar o status atual da sessão. 
     var_dump(session_status());
 
-    // Retorna um int(0) caso estiver desabilitada, um int(1) para caso estiver habilitada mas nenhuma sessão existir e retorna int(2) para caso estiver habilitada e existir pelo menos uma sessão.
+    // Retorna um int(0) caso estiver desabilitada, um int(1) para caso estiver habilitada, mas nenhuma sessão existir e retorna int(2) para caso estiver habilitada e existir pelo menos uma sessão.
     switch (session_status()) {
         case PHP_SESSION_DISABLED:
             echo " se as sessões estiverem desabilitadas";
