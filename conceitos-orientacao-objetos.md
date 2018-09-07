@@ -30,3 +30,5 @@ Professor = Objeto;
 Alunos e matérias = Atributos, ou seja, todas as informações necessárias para se lecionar/ensinar/organizar dentro dessa sala de aula;
 
 Ação de ensinar ou qualquer outra coisa dentro da sala = Método.
+
+O encapsulamento nesse contexto fica assim, para você conseguir conversar com um aluno daquela classe, você deve ir até ela e pedir permissão ao professor para depois chamar o aluno que você precisa. Resumindo, o aluno fica privado, apenas nesse caso, pela sala de aula e o professor é apenas um obstáculo para se chegar nesse aluno.
