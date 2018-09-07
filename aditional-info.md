@@ -11,3 +11,5 @@ Tip: Utilizar um arquivo config.php para armanezar um cógido para ajudar nas su
 ID de sessão = É uma identificação da sua sessão única no servidor, para poder identificar que é você, e ao abrir um nova aba, por exemplo, em uma navegação anônima, ele cria uma nova sessão. 
 
 Session hijacking = Se o hacker conseguir o acesso ao ID da sessão do usuário, ele pode roubar os dados presentes naquela sessão. Uma forma de se progeter disso é com o HTTPS, que entre outras informações        importantes ele irá criptografar o ID da sessão. Uma boa prática é usar a session_regenerate_id em um arquivo, com o nome, por exemplo, de valida.php, mesmo ele já tendo um ID de sessão criado, ele vai       criar um outro ID.
+
+Time Stamp = Uma marca temporal (ou estampa de tempo) é uma cadeia de caracteres denotando a hora ou data que certo evento ocorreu. A cadeia é geralmente apresentada num formato consistente, permitindo fácil comparação entre duas marcas temporais distintas. Elas são padronizadas pela Organização Internacional para Padronização (ISO) através da ISO 8601. Exemplo: 1970-01-01
