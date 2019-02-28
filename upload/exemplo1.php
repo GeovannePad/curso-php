@@ -11,8 +11,6 @@
   if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Array superglobal, servindo para tratar arquivos. $_FILES
     $file = $_FILES["image"];
-    var_dump($file);
-    die();
     if ($file["error"]) {
       //Força um erro
       throw new Exception("Error: " . $file["error"]);
