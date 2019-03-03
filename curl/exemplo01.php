@@ -6,7 +6,7 @@
   // CEP do local para coletar os dados
   $cep = "01310100";
 
-  // URL do Web Service que iramos usar.
+  // URL do Web Service que iremos usar.
   $link = "https://viacep.com.br/ws/$cep/json/";
 
   // Chama a biblioteca, passando o endereço de comunicação.
