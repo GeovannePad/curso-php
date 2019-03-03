@@ -25,6 +25,7 @@
     echo $e->getMessage();
 
     // "Finalmente", ele sempre vai ser executado por último, independente do try e catch.
+    // Pode ser usado para mandar mensagem de erro para os desenvolvedores ou para um admin.
   } finally {
     echo "Executou o Try!";
   }
