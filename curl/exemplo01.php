@@ -17,7 +17,7 @@
   // 1ª Parâmetro é a variável onde se iniciou a biblioteca, 2º Parâmetro é a opção/configuração que deseja e o 3º Parâmetro é se você quer ou não que isso seja executado ou ignorado
 
   // Nesta primeira opção, é uma configuração que possibilita o retorno de informações, quer dizer que você está esperando uma resposta. Neste caso a informação vai e depois volta uma resposta do serviço, no caso o 3º parâmetro deve ser 1 (true) para isso acontecer.
-  // Caso você coloque 0 (false), ele vai entender que você apenas está enviando um dado ou uma notificação, e não se preocupará em mandar nenhuma resposta
+  // Caso você coloque 0 (false), ele vai entender que você apenas está enviando um dado ou uma notificação, e não se preocupará em mandar nenhuma resposta.
   curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
   
   // Nesta outra opção, ela vai validar se o SSL(caso exista) existir em um orgão certificador, neste caso, eu não quero que isso aconteça, então coloco 0 (false).
