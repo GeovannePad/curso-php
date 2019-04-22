@@ -11,7 +11,7 @@ $file = "wallpaper.jpg";
 $new_width = 256;
 $new_height = 256;
 
-// Função list() do php, é usada para coletar os dados de um array baseado na sua posição, e em seguida criando variáveis contendo esses dados.
+// Função list() do php, é usada para coletar os dados de um array baseado na sua posição, e em seguida criar variáveis contendo esses dados.
 // Neste caso, como os dois dados que queremos é respectivamente o 1º e o 2º, ou seja, o 1º tem index [0] e o 2º index [1].
 // O valor do index [0] vai ser armazenado em $old_width e o valor do index [1] em $old_height.
 list($old_width, $old_height) = getimagesize($file);
@@ -44,7 +44,8 @@ imagecopyresampled($new_image, $old_image, 0, 0, 0, 0, $new_width, $new_height, 
 
 // Envia/emite uma imagem do tipo JPEG, enviando para o browser ou para um arquivo.
 // Enviando com 100% da qualidade.
-imagejpeg($new_image, "thumbnail" . date("Y-m-d") . ".jpg", 100);
+// Gerando um arquivo para a thumbnail.
+imagejpeg($new_image, "thumbnail-" . date("Y-m-d") . ".jpg", 100);
 
 // Destruindo as variáveis utilizadas para desalocar qualquer memória a elas.
 imagedestroy($old_image);
