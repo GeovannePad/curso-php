@@ -19,3 +19,6 @@ Session hijacking = Se o hacker conseguir o acesso ao ID da sessão do usuário,
 Time Stamp = Uma marca temporal (ou estampa de tempo) é uma cadeia de caracteres denotando a hora ou data que certo evento ocorreu. A cadeia é geralmente apresentada num formato consistente, permitindo fácil comparação entre duas marcas temporais distintas. Elas são padronizadas pela Organização Internacional para Padronização (ISO) através da ISO 8601. Exemplo: 1970-01-01
 
 SPL = Standard php library, um conjunto de funções padrões do php usadas para resolver lacunas presentes em seu código.
+
+PHP-FIG: Site da documentação de como funciona o composer, que é baseado no PSR, e sobre boas maneiras e "regras" para se escrever um código limpo e bem formatado.
+
