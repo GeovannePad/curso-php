@@ -43,50 +43,68 @@ SQL Injection -> É explorado por uma má prática do desenvolver.
 
 Permissões de Pasta -> Regras de permissões do UNIX.
 
-   As permissões vão de 0 a 7, 
+  As permissões vão de 0 a 7, 
 
-   Número 0 = Nenhuma permissão.
+  Número 0 = Nenhuma permissão.
 
-   Número 1 = Permissão de execução.
+  Número 1 = Permissão de execução.
 
-   Número 2 = Permissão de gravação.
+  Número 2 = Permissão de gravação.
 
-   Número 3 = Permissão de execução e gravação.
+  Número 3 = Permissão de execução e gravação.
 
-   Número 4 = Permissão de leitura.
+  Número 4 = Permissão de leitura.
 
-   Número 5 = Permissão de leitura e execução.
+  Número 5 = Permissão de leitura e execução.
 
-   Número 6 = Permissão de leitura e gravação.
+  Número 6 = Permissão de leitura e gravação.
 
-   Número 7 = Permissão total (leitura, gravação e execução). Cuidado!]
+  Número 7 = Permissão total (leitura, gravação e execução). Cuidado!]
 
    Os mais comuns é o 7 e 5.
 
-   O conjunto de permissões do UNIX segue uma regra de 3 números, por exemplo, "0765":
-   O primeiro número, no caso o 7, se refere ao dono(owner) que criou aquele diretório.
-   O segundo número, no caso o 6, se refere a grupos(groups).
-   O terceiro número, no caso o 5, se refere aos outros(others), os guests, os visitantes, no caso os usuários que acessam o site.
+  O conjunto de permissões do UNIX segue uma regra de 3 números, por exemplo, "0765":
+  O primeiro número, no caso o 7, se refere ao dono(owner) que criou aquele diretório.
+  O segundo número, no caso o 6, se refere a grupos(groups).
+  O terceiro número, no caso o 5, se refere aos outros(others), os guests, os visitantes, no caso os usuários que acessam o site.
 
-   ReCaptcha -> Usado para prevenir ataques de robôs, no caso, códigos automatizados, preencham formulários, e usem para má intenções.
+  ReCaptcha -> Usado para prevenir ataques de robôs, no caso, códigos automatizados, preencham formulários, e usem para má intenções.
 
-   Cross-Site_Scripting (XSS) -> Ataque hacker, similar a injeção de comando, ele coloca códigos html em campos de entrada de dados. Ou até mesmo códigos javascript.
+  Cross-Site_Scripting (XSS) -> Ataque hacker, similar a injeção de comando, ele coloca códigos html em campos de entrada de dados. Ou até mesmo códigos javascript.
 
    Existem dois tipos de XSS
 
-   Temporário -> Momentâneo, dando o F5, ele some. Códigos HTML por exemplo.
-   Permanente -> Quando ele coloca informações e comandos em querys que estão indo para os banco de dados. Conseguindo acesso a cookies/sessões de outros usuários.
+  Temporário -> Momentâneo, dando o F5, ele some. Códigos HTML por exemplo.
+  Permanente -> Quando ele coloca informações e comandos em querys que estão indo para os banco de dados. Conseguindo acesso a cookies/sessões de outros usuários.
 
-   Defense in Depth -> Significado defesa em camadas, ou layers de segurança. Ela envolve várias camadas de segurança, para caso o usuário quebre uma, e exista outra para para-lo.
+  Defense in Depth -> Significado defesa em camadas, ou layers de segurança. Ela envolve várias camadas de segurança, para caso o usuário quebre uma, e exista outra para para-lo.
 
-   Existem duas arquiteturas a se pensar:
+  Existem duas arquiteturas a se pensar:
 
-   Arquitetura física -> Se refere ao servidor físico, por exemplo, quem tem acesso a esses dados/servidor, onde está localizado ou até mesmo se há pessoal de segurança nessas instalações. Caso for terceirizar esse serviço, é recomendável contratar empresas boas e confiáveis.
-   Hoje em dia usa-se muito máquinas virtuais, ou seja, servidores na nuvem, exemplo: Amazon, microsoft azure, google clouds.
+  Arquitetura física -> Se refere ao servidor físico, por exemplo, quem tem acesso a esses dados/servidor, onde está localizado ou até mesmo se há pessoal de segurança nessas instalações. Caso for terceirizar esse serviço, é recomendável contratar empresas boas e confiáveis.
+  Hoje em dia usa-se muito máquinas virtuais, ou seja, servidores na nuvem, exemplo: Amazon, microsoft azure, google clouds.
 
-   Arquitetura de desenvolvimento -> Parte do desenvolvedor, jamais deve armzazenar o usuário e a senha do usuário num arquivo de texto, por exemplo, para deixar o usuário logado sempre.
-   Quanto mais camadas de segurança, melhor.
-   NUNCA CONFIE EM APENAS UM SERVIÇO DE AUTORIZAÇÃO.
+  Arquitetura de desenvolvimento -> Parte do desenvolvedor, jamais deve armazenar o usuário e a senha do usuário num arquivo de texto, por exemplo, para deixar o usuário logado sempre.
+  Quanto mais camadas de segurança, melhor.
+  NUNCA CONFIE EM APENAS UM SERVIÇO DE AUTORIZAÇÃO.
 
-   Use criptografias, em senhas, e informações vitais do usuário.
-   Usar SSL, usar o https.
+  Use criptografias, em senhas, e informações vitais do usuário.
+  Usar SSL, usar o https.
+
+
+  Session Hijacking -> Ataque realizado em sessões, acontece porque, quando você acessa um site, o servidor cria um arquivo de texto no servidor, contendo o ID de sessão. Juntamente ele cria esse mesmo arquivo na máquina do usuário, e então o site compara esses arquivos e caso esteja igual, ele compartilha os dados que estão sendo trafegadas na sessão tanto nesse arquivo de texto localizado na máquina do cliente, quanto no servidor.
+
+  No, caso, esse ataque ocorre quando um usuário cracker/hacker, consegue acesso a esse ID de sessão, e posteriormente, ele manda uma requisição pro servidor, passando esse ID de sessão e caso esse ID exista, ele consegue acesso aos dados de um outro usuário.
+
+  SSL (Security Socket Layer) -> Camada de segurança, que encripta as informações que estão em tráfego entre o usuário e o servidor, provendo uma certa segurança para sua aplicação Web.
+
+  O SSL funciona como um documento, pois uma autoridade certificadora, cria um documento que possui todas as informações da empresa(local, função, dominio etc), e então eles verificam se essas informações são verdadeiras, e caso for, eles irão assinar esse documento, e então será gerado uma chave criptografada (arquivo de texto) para ser importado para o servidor web. Quem instala e configura esse certificado, é o pessoal da infraestrutura.
+
+  Caso for uma máquina virtual, é necessário fazer o registro e a configuração desse certificado.
+
+  Métodos para evitar o Session Hijacking: 
+
+  Usar SSL
+  Gerar um novo ID de sessão.
+
+  
